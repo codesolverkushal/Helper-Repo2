@@ -1,15 +1,14 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-
 import { server } from "../../constants/config";
 
-export const api = createApi({
+const api = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({ baseUrl: `${server}/api/v1/` }),
-  tagTypes: ["Chat"],
+  tagTypes: ["Chat", "User", "Message"],
 
   endpoints: (builder) => ({
     myChats: builder.query({
-      query: (name) => ({
+      query: () => ({
         url: "chat/my",
         credentials: "include",
       }),
@@ -33,6 +32,7 @@ export const api = createApi({
       }),
       invalidatesTags: ["User"],
     }),
+
     getNotifications: builder.query({
       query: () => ({
         url: `user/notifications`,
@@ -40,6 +40,7 @@ export const api = createApi({
       }),
       keepUnusedDataFor: 0,
     }),
+
     acceptFriendRequest: builder.mutation({
       query: (data) => ({
         url: "user/acceptrequest",
@@ -87,6 +88,7 @@ export const api = createApi({
       }),
       providesTags: ["Chat"],
     }),
+
     availableFriends: builder.query({
       query: (chatId) => {
         let url = `user/friends`;
@@ -157,12 +159,10 @@ export const api = createApi({
       }),
       invalidatesTags: ["Chat"],
     }),
-
   }),
 });
 
 export default api;
-
 export const {
   useMyChatsQuery,
   useLazySearchUserQuery,
@@ -170,7 +170,7 @@ export const {
   useGetNotificationsQuery,
   useAcceptFriendRequestMutation,
   useChatDetailsQuery,
-  useGetMessagesQuery, 
+  useGetMessagesQuery,
   useSendAttachmentsMutation,
   useMyGroupsQuery,
   useAvailableFriendsQuery,
@@ -180,5 +180,4 @@ export const {
   useAddGroupMembersMutation,
   useDeleteChatMutation,
   useLeaveGroupMutation,
-
 } = api;
