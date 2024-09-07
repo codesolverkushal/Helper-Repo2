@@ -10,6 +10,7 @@ import { server } from "./constants/config";
 import { userExists, userNotExists } from "./redux/reducers/auth";
 
 import { SocketProvider } from "./Socket";
+import Profile from "./components/specific/Profile";
 
 // Lazy loading components
 const Home = lazy(() => import("./pages/Home"));
@@ -67,6 +68,7 @@ const App = () => {
           <Route path="/admin/messages" element={<MessageManagement />} />
 
           <Route path="*" element={<Notfound />} />
+          <Route path="/profile" element={<Profile/>} />
         </Routes>
       </Suspense>
 

@@ -89,7 +89,7 @@ const Header = () => {
         <AppBar
           position="static"
           sx={{
-            bgcolor: orange,
+            background: 'linear-gradient(90deg, rgba(102, 126, 234, 1) 0%, rgba(118, 75, 162, 1) 100%)',
           }}
         >
           <Toolbar>
@@ -97,7 +97,7 @@ const Header = () => {
               variant="h6"
               sx={{ display: { xs: "none", sm: "block" } }}
             >
-              KP-Chat
+              🅺🅿-🅲🅷🅰🆃
             </Typography>
             <Box
               sx={{
