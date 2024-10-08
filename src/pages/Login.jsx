@@ -1,6 +1,6 @@
 import { useFileHandler, useInputValidation } from '6pp';
 import { CameraAlt as CameraAltIcon } from '@mui/icons-material';
-import { Avatar, Button, Container, IconButton, Paper, Stack, TextField, Typography } from '@mui/material';
+import { Avatar, Button, Container, Divider, IconButton, Paper, Stack, TextField, Typography } from '@mui/material';
 import axios from 'axios';
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
@@ -116,6 +116,16 @@ const Login = () => {
         alignItems:"center"
     }}>
       <Paper elevation={3} sx={{ padding: 4, display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <Stack direction="column" alignItems="center" mb={3}>
+          
+          <Typography variant="h6" sx={{ color: "green" }}>Demo Credentials</Typography>
+          <Typography variant="body1" mt={2}>Username: rohitcoder</Typography>
+          <Typography variant="body1">Password - password</Typography>
+        </Stack>
+
+        <Divider sx={{ width: "100%", marginBottom: "1rem" }} />
+      
+
         {isLogin ? (
           <>
             <Typography variant="h5">Login</Typography>
