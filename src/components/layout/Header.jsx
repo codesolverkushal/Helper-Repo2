@@ -99,6 +99,8 @@ const Header = () => {
             >
               🅺🅿-🅲🅷🅰🆃
             </Typography>
+            <img src="https://media.tenor.com/Ad2Wt8tEVSIAAAAi/rotating-ig-instagram.gif" alt="" className="w-10"/>
+
             <Box
               sx={{
                 display: { xs: "block", sm: "none" },
@@ -107,6 +109,9 @@ const Header = () => {
               <IconButton color="inherit" onClick={handlemobile}>
                 <MenuIcon />
               </IconButton>
+              {/* <img src="https://media.tenor.com/BVP9rVXwBl0AAAAj/socia-media-log-on.gif" alt="" className="w-10"/> */}
+
+
             </Box>
             <Box sx={{ flexGrow: 1 }} />
             <Box>

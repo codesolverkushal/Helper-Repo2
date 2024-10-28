@@ -117,10 +117,11 @@ const Login = () => {
     }}>
       <Paper elevation={3} sx={{ padding: 4, display: "flex", flexDirection: "column", alignItems: "center" }}>
         <Stack direction="column" alignItems="center" mb={3}>
+        <img src="https://media1.tenor.com/m/VinSlhZc6jIAAAAC/meme-typing.gif" alt=""  className='w-20 bg-white rounded-lg'/>
           
           <Typography variant="h6" sx={{ color: "green" }}>Demo Credentials</Typography>
-          <Typography variant="body1" mt={2}>Username: rohitcoder</Typography>
-          <Typography variant="body1">Password - password</Typography>
+          <Typography variant="body1" mt={2}>Username : rohitcoder</Typography>
+          <Typography variant="body1">Password : password</Typography>
         </Stack>
 
         <Divider sx={{ width: "100%", marginBottom: "1rem" }} />
